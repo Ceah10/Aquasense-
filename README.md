@@ -63,27 +63,34 @@ AquaSense uses a frontend-backend architecture.
 WATERMIND_MVP_Starter_Project/
 │
 ├── backend/
-│   └── app/
-│       ├── main.py
-│       └── aquasense.db
+│   ├── app/
+│   │   ├── __init__.py
+│   │   └── main.py
+│   └── requirements.txt
 │
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
 │   │   │   └── EmbuMap.jsx
 │   │   ├── App.jsx
+│   │   ├── main.jsx
 │   │   └── style.css
 │   ├── package.json
+│   ├── package-lock.json
 │   └── index.html
 │
+├── documentation/
+│   └── PROJECT_STATUS.md
+│
+├── .gitignore
 └── README.md
 ```
 
-## 7. Running the Application
+## 7. Running the Application Locally
 
 ### Backend
 
-Open PowerShell:
+Open PowerShell from the project directory:
 
 ```powershell
 cd backend
@@ -95,7 +102,7 @@ Backend address:
 
 `http://127.0.0.1:8000`
 
-API documentation:
+Local API documentation:
 
 `http://127.0.0.1:8000/docs`
 
@@ -105,6 +112,7 @@ Open a second terminal:
 
 ```powershell
 cd frontend
+npm install
 npm run dev
 ```
 
@@ -112,7 +120,29 @@ Frontend address:
 
 `http://localhost:5173`
 
-## 8. Data and Limitations
+## API Documentation
+
+- **Swagger UI:** https://aquasense-api-z7s6.onrender.com/docs
+- **ReDoc:** https://aquasense-api-z7s6.onrender.com/redoc
+- **API Health:** https://aquasense-api-z7s6.onrender.com/api/health
+- **API Root:** https://aquasense-api-z7s6.onrender.com/git add README.md
+git commit -m "Add live AquaSense API documentation"
+git push
+### Public API Documentation
+
+- **Swagger UI:** `https://YOUR-RENDER-SERVICE-URL.onrender.com/docs`
+- **ReDoc:** `https://YOUR-RENDER-SERVICE-URL.onrender.com/redoc`
+- **API Health:** `https://YOUR-RENDER-SERVICE-URL.onrender.com/api/health`
+
+Replace `YOUR-RENDER-SERVICE-URL` with the actual Render service domain.
+
+### API Root
+
+The API root endpoint provides basic application information:
+
+`https://YOUR-RENDER-SERVICE-URL.onrender.com/`
+
+## 9. Data and Limitations
 
 The current MVP uses simulated water data. It does not currently represent live measurements from physical water infrastructure.
 
@@ -122,7 +152,7 @@ Flow anomaly screening identifies unusual differences for further investigation.
 
 Shortage forecasts are estimates based on the simulation inputs and assumptions.
 
-## 9. Future Development
+## 10. Future Development
 
 - Integration with real water-level sensors.
 - Real-time monitoring and automated data collection.
@@ -131,7 +161,7 @@ Shortage forecasts are estimates based on the simulation inputs and assumptions.
 - User authentication and role-based access.
 - Expansion to additional counties and water service areas.
 
-## 10. Project Vision
+## 11. Project Vision
 
 AquaSense aims to demonstrate how software engineering, data analysis and intelligent monitoring can contribute to more informed water resource management.
 
