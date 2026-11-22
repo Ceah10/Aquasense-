@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.venv/
+__pycache__/
+*.pyc
+.env
+
+# Local databases and backups
+backend/app/*.db
+backend/app/*backup*.py
+
